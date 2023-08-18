@@ -13,14 +13,7 @@ rotate 3 steps to the right: [5,6,7,1,2,3,4]
 
 
 class Solution {
-    public void rotate(int[] nums, int k) {
-        int n=nums.length-1;
-       
-        k=k%n;
-        reverseArray(nums,0,n);
-        reverseArray(nums,0,k-1);
-        reverseArray(nums,k,n);
-    }
+
     public static void reverseArray(int nums[],int start,int end)
         {
             while(start<end)
@@ -32,4 +25,12 @@ class Solution {
             end--;
             }
         }  
+    public void rotate(int[] nums, int k) {
+       
+       k%=nums.length;
+        reverseArray(nums,0,nums.length-1);
+        reverseArray(nums,0,k-1);
+        reverseArray(nums,k,nums.length-1);
+    }
+    
 }
