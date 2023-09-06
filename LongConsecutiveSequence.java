@@ -17,10 +17,10 @@ class Solution {
            {
                max=1;
                longest=i;
-               while(h.contains(long+1))
+               while(h.contains(longest+1))
                {
                    max+=1;
-                   longest=+=1;
+                   longest+=1;
                }
            }
           ans=Math.max(max,ans);
